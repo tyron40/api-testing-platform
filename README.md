@@ -1,57 +1,121 @@
 # API Testing Platform
 
-A comprehensive automated API testing platform for RESTful and GraphQL APIs with test generation and monitoring capabilities.
+A comprehensive automated API testing platform built with React and Node.js that enables teams to create, manage, and automate API tests with ease. The platform supports both RESTful and GraphQL APIs, featuring test generation, scheduling, and detailed reporting capabilities.
+
+![API Testing Platform](https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=2000)
 
 ## Features
 
-- **Automated Test Generation**: Automatically generate test cases from API specifications
-- **Test Builder**: Visual interface for creating and editing API tests
-- **Test Execution**: Run tests manually or on a schedule
-- **Monitoring**: Track API performance and reliability over time
-- **Reporting**: Detailed test results and analytics
-- **Authentication**: Secure user accounts and API access
+### Test Management
+- **Visual Test Builder**: Intuitive interface for creating and editing API tests
+- **Test Generation**: Automatically generate test cases from API specifications
+- **Multi-Protocol Support**: Test both REST and GraphQL APIs
+- **Environment Management**: Configure and switch between different environments
+- **Variable Management**: Define and manage environment variables
+
+### Test Execution
+- **Automated Testing**: Schedule tests to run automatically
+- **Real-time Execution**: Watch test execution in real-time
+- **Parallel Execution**: Run multiple test suites simultaneously
+- **Configurable Retries**: Automatically retry failed tests
+- **Conditional Logic**: Add dynamic behavior to your tests
+
+### Authentication Support
+- JWT Authentication
+- API Key Authentication
+- Basic Authentication
+- OAuth 2.0 Integration
+
+### Monitoring & Reporting
+- **Real-time Dashboard**: Monitor test execution and results
+- **Detailed Reports**: Get comprehensive test execution reports
+- **Performance Metrics**: Track API response times and reliability
+- **Failure Analysis**: Detailed error reporting and debugging tools
+- **Historical Data**: Track trends and patterns over time
+
+### Security
+- **Role-based Access**: Control user permissions
+- **Secure Storage**: Encrypted storage for sensitive data
+- **Audit Logging**: Track all system activities
 
 ## Tech Stack
 
-- **Frontend**: React, Tailwind CSS
-- **Backend**: Node.js, Express
-- **Database**: MongoDB
-- **Containerization**: Docker
-- **Authentication**: JWT
+### Frontend
+- React 18
+- TypeScript
+- Tailwind CSS
+- React Router
+- Lucide Icons
+- Axios
+
+### Backend
+- Node.js
+- Express
+- JWT Authentication
+- Winston Logger
+- Swagger UI
+
+### Database
+- MongoDB (configured but mocked for demo)
 
 ## Getting Started
 
 ### Prerequisites
-
-- Node.js (v14+)
+- Node.js 18 or higher
 - npm or yarn
-- Docker and Docker Compose (optional)
+- MongoDB (optional, mocked in demo)
 
 ### Installation
 
-1. Clone the repository
-2. Install dependencies:
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/api-testing-platform.git
+cd api-testing-platform
+```
 
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-3. Create a `.env` file based on `.env.example`
+3. Create environment file:
+```bash
+cp .env.example .env
+```
+
+4. Update environment variables in `.env`:
+```env
+PORT=5000
+NODE_ENV=development
+JWT_SECRET=your-secret-key
+```
 
 ### Development
 
-Start the development server:
-
+Start both frontend and backend servers:
 ```bash
 npm run dev:all
 ```
 
-This will start both the frontend and backend servers.
+Or start them separately:
+```bash
+# Frontend only
+npm run dev
 
-### Docker
+# Backend only
+npm run server
+```
 
-To run the application using Docker:
+### Building for Production
 
+Build the application:
+```bash
+npm run build
+```
+
+### Docker Support
+
+Run with Docker Compose:
 ```bash
 docker-compose up
 ```
@@ -61,24 +125,58 @@ docker-compose up
 ```
 ├── src/                  # Frontend React application
 │   ├── components/       # Reusable UI components
-│   ├── context/          # React context providers
-│   ├── pages/            # Application pages
-│   └── main.tsx          # Application entry point
-├── server/               # Backend Node.js application
-│   ├── models/           # MongoDB models
-│   ├── routes/           # API routes
-│   ├── services/         # Business logic
-│   ├── middleware/       # Express middleware
-│   ├── utils/            # Utility functions
-│   └── index.js          # Server entry point
-├── Dockerfile            # Docker configuration
-└── docker-compose.yml    # Docker Compose configuration
+│   ├── context/         # React context providers
+│   ├── pages/           # Application pages
+│   └── utils/           # Utility functions
+├── server/              # Backend Node.js application
+│   ├── models/          # Database models
+│   ├── routes/          # API routes
+│   ├── services/        # Business logic
+│   ├── middleware/      # Express middleware
+│   └── utils/           # Utility functions
+├── public/              # Static assets
+└── docker/              # Docker configuration
 ```
 
 ## API Documentation
 
-API documentation is available at `/api-docs` when the server is running.
+API documentation is available at `/api-docs` when the server is running. The documentation is generated using Swagger UI and provides detailed information about all available endpoints.
+
+### Key Endpoints
+
+- **Authentication**
+  - POST `/api/auth/register` - Register new user
+  - POST `/api/auth/login` - User login
+  - GET `/api/auth/me` - Get current user
+
+- **Test Suites**
+  - GET `/api/test-suites` - List all test suites
+  - POST `/api/test-suites` - Create new test suite
+  - GET `/api/test-suites/:id` - Get test suite details
+  - PUT `/api/test-suites/:id` - Update test suite
+  - DELETE `/api/test-suites/:id` - Delete test suite
+  - POST `/api/test-suites/:id/run` - Run test suite
+
+- **Test Results**
+  - GET `/api/test-results` - List all test results
+  - GET `/api/test-results/:id` - Get test result details
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 
-MIT
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- [React](https://reactjs.org/)
+- [Node.js](https://nodejs.org/)
+- [Express](https://expressjs.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Lucide Icons](https://lucide.dev/)
