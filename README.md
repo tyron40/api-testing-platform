@@ -2,6 +2,11 @@
 
 A comprehensive automated API testing platform built with React and Node.js that enables teams to create, manage, and automate API tests with ease. The platform supports both RESTful and GraphQL APIs, featuring test generation, scheduling, and detailed reporting capabilities.
 
+![screencapture-visionary-praline-e407fb-netlify-app-2025-03-27-17_15_25](https://github.com/user-attachments/assets/f98fba39-d8de-400b-908c-270ca5f4e483)
+![screencapture-visionary-praline-e407fb-netlify-app-test-builder-2025-03-27-17_15_48](https://github.com/user-attachments/assets/057c7d3d-671f-49e4-b6db-619ebb99e5b9)
+![screencapture-visionary-praline-e407fb-netlify-app-test-results-2025-03-27-17_16_09](https://github.com/user-attachments/assets/9fedb169-5431-486e-8804-0299ec7b7e57)
+![screencapture-visionary-praline-e407fb-netlify-app-settings-2025-03-27-17_16_23](https://github.com/user-attachments/assets/02cb2979-4e78-4d4b-9dd0-8c1036a5f192)
+
 ![API Testing Platform](https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=2000)
 
 ## Features
